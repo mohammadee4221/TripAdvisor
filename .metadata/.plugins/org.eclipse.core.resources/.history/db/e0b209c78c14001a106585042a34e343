@@ -1,0 +1,40 @@
+package Tests;
+
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import BaseTest.BaseTest;
+import Util.TestUtil;
+import pages.SearchPage;
+
+public class SearchPageTest extends BaseTest{
+	
+	SearchPage searchPage;
+	TestUtil testUtil;
+	
+	public SearchPageTest(){
+		super();		
+	}
+
+	
+	@BeforeMethod
+	public void setUp() throws InterruptedException {				
+		
+		searchPage = new SearchPage();
+		testUtil = new TestUtil();
+		
+	}
+	
+	@Test(priority=0)
+	public void searchClubMahindra(){
+		searchPage.searchClub();
+ 			
+	}
+		
+	@AfterMethod
+	public void tearDown(){
+		//driver.quit();
+		driver.close();
+	}
+}

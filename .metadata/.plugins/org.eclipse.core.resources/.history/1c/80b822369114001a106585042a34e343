@@ -1,0 +1,63 @@
+package Tests;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import BaseTest.BaseTest;
+import Util.TestUtil;
+import junit.framework.Assert;
+import pages.SearchPage;
+
+public class SearchPageTest extends BaseTest{
+	
+	SearchPage searchPage;
+	TestUtil testUtil;
+	
+	public SearchPageTest(){
+		super();		
+	}
+
+	 public void waitForPageLoaded() {
+	        ExpectedCondition<Boolean> expectation = new
+	                ExpectedCondition<Boolean>() {
+	                    public Boolean apply(WebDriver driver) {
+	                        return ((JavascriptExecutor) driver).executeScript("return document.readyState").toString().equals("complete");
+	                    }
+	                };
+	        try {
+	            Thread.sleep(1000);
+	            WebDriverWait wait = new WebDriverWait(driver, 30);
+	            wait.until(expectation);
+	        } catch (Throwable error) {
+	            Assert.fail("Timeout waiting for Page Load Request to complete.");
+	        }
+	    }
+	 
+	@BeforeMethod
+	public void setUp() throws InterruptedException {				
+		
+		searchPage = new SearchPage();
+		testUtil = new TestUtil();
+		
+	}
+	
+	@Test(priority=0)
+	public void searchClubMahindra(){
+		
+		searchPage.searchClub();
+		
+	}
+	
+		
+	@AfterMethod
+	public void tearDown(){
+		//driver.quit();
+		driver.close();
+	}
+}

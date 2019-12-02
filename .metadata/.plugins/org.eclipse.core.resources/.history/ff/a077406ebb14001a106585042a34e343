@@ -1,0 +1,53 @@
+package pages;
+
+import java.util.List;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+import BaseTest.BaseTest;
+
+public class RatingPage extends BaseTest {
+	
+	public RatingPage() {
+		PageFactory.initElements(driver, this);
+	}
+	
+//	 @FindBy(how=How.XPATH, using="//*[contains(@class,\"brand-global-nav-action-search-Search__searchButton--b9-IK\") ]")public WebElement searchBox;
+//	 @FindBy(how=How.XPATH, using="//input[@id=\"mainSearch\"]") WebElement searchInput;
+//	 @FindBy(how=How.XPATH, using="//*[@class=\"first-row\"]//span[@class=\"poi-name primaryText\" and contains(text(), \" Madikeri, Coorg\")]")private List<WebElement> searchClubMahindra;
+//	 @FindBy(how=How.XPATH, using="//*[contains(@class,'ui_button primary')]") WebElement clickWriteReview;
+	 @FindBy(how=How.CSS, using="#bubble_rating") WebElement selectRating;
+	 @FindBy(how=How.CSS, using="//*[@id=\"ratingFlag\"]") WebElement RatingFlag;	
+	 @FindBy(how=How.CSS, using="#ReviewTitle") WebElement ReviewTitle;
+	 @FindBy(how=How.CSS, using="#ReviewText") WebElement ReviewText;	
+	 @FindBy(how=How.CSS, using="//*[@id=\"qid12_bubbles\"]")WebElement ServiceRating;	
+	 @FindBy(how=How.CSS, using="//*[@id=\"qid14_bubbles\"]") WebElement CleanRating;
+	 @FindBy(how=How.CSS, using="#qid11_bubbles") WebElement RoomsRating;	
+	 
+	 public void provideRating(String star) {
+		 new Actions(driver).moveToElement( selectRating).perform();
+		 RatingFlag.click();
+		 ReviewTitle.sendKeys("Club Mahindra Reviews");
+		 ReviewText.sendKeys("Club Mahindra Madikeri, Coorg is an excellent choice for travellers visiting Madikeri, offering a romantic environment alongside many helpful amenities designed to enhance your stay.	Close to some of Madikeri's most popular landmarks, such as Raja's Tomb ( Gadhige) (2.6 km) and Omkareshwara Temple (3.5 km), Club Mahindra Kodagu Valley Hotel is a great destination for tourists.	Rooms at Club Mahindra Madikeri, Coorg provide a flat screen TV, a refrigerator, and a kitchenette, and guests can stay connected with internet access.	");
+	 }
+	 
+	 public void hotelrating() {
+		 new Actions(driver).moveToElement( ServiceRating).perform();
+		 RatingFlag.click();
+	 }
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+
+}
