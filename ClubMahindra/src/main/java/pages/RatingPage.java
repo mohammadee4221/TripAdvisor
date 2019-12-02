@@ -36,14 +36,14 @@ public class RatingPage extends BaseTest {
 		 ServiceRating.click();
 	 }
 	 
-	 public void cleanRating() {
-		 new Actions(driver).moveToElement( CleanRating).perform();
-		 CleanRating.click();
-	 }	 
-	 public void  roomsRating() {
-		 new Actions(driver).moveToElement( RoomsRating).perform();
-	     RoomsRating.click();
-	 }	 
+// 	 public void cleanRating() {
+// 		 new Actions(driver).moveToElement( CleanRating).perform();
+// 		 CleanRating.click();
+// 	 }	 
+// 	 public void  roomsRating() {
+// 		 new Actions(driver).moveToElement( RoomsRating).perform();
+// 	     RoomsRating.click();
+// 	 }	 
 	 public void sumbitReview()	{
 		SubmitYourView.click();
 		Submit.click();
