@@ -16,9 +16,7 @@ public class SearchPageTest extends BaseTest{
 	
 	public SearchPageTest(){
 		super();		
-	}
-
-	 
+	}	 
 	 
 	@BeforeMethod
 	public void setUp() throws InterruptedException {				
@@ -45,10 +43,8 @@ public class SearchPageTest extends BaseTest{
 				
 	}
 	
-		
 	@AfterMethod
 	public void tearDown(){
-		driver.quit();
-		
+		driver.quit();	
 	}
 }
