@@ -5,12 +5,12 @@
   <artifactId>ClubMahindra</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>MavenWebApp Maven Webapp</name>
+  <name>ClubMahindra Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
-      <artifactId>ClubMahindra</artifactId>
+      <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
