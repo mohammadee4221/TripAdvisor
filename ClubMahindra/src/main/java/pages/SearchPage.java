@@ -20,7 +20,7 @@ public class SearchPage extends BaseTest {
 	 @FindBy(how=How.XPATH, using="//*[contains(@class,\"brand-global-nav-action-search-Search__searchButton--b9-IK\") ]")public WebElement searchBox;
 	 @FindBy(how=How.XPATH, using="//input[@id=\"mainSearch\"]") WebElement searchInput;
 	 @FindBy(how=How.XPATH, using="//*[@class=\"first-row\"]//span[@class=\"poi-name primaryText\" and contains(text(), \" Madikeri, Coorg\")]")private List<WebElement> searchClubMahindra;
-	 @FindBy(how=How.XPATH, using="//*[contains(@class,'ui_button primary')]") WebElement clickWriteReview;
+	 @FindBy(how=How.XPATH, using="//*[@id=\"component_12\"]/div/div[2]/div/div[2]/div/div[1]/a") WebElement clickWriteReview;
 
 	 
 	 public void searchClub() {
